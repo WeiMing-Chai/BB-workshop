@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- Task 1 -->
+  <h1>Hi friend, try edit me!</h1>
+
+  <!-- Task 2 -->
+  <img src="cafe.webp" alt="Any Image" width="500" height="600" />
+
+  <ul id="beverageList"></ul>
+
+  <button onclick="toggleBackgroundColor()">Toggle Background Color</button>
+
+  <script>
+
+    // Task 3
+
+    const beverageNames = ['Matcha Latte', 'Double Choc', 'Americano'];
+    function createBeverageList() {
+      for (let i = 1; i <= beverageNames.length; i++) {
+        displayBeverage(beverageNames[i - 1])
+      }
+    }
+
+    createBeverageList()
+    function displayBeverage(beverageName) {
+      const beverageList = document.getElementById('beverageList');
+      const li = document.createElement('li');
+      li.textContent = beverageName;
+      beverageList.appendChild(li);
+    }
+
+    // Task 4
+    let isOriginalColor = true;
+
+    function toggleBackgroundColor() {
+      if (isOriginalColor === true) {
+        document.body.style.backgroundColor = 'lightblue';
+      } else {
+        document.body.style.backgroundColor = '';
+      }
+      // ___`do smt here to make isOriginalColor becomes the opposite of what it was before`___
+    }
+  </script>
+
+
+</body>
+
+</html>
